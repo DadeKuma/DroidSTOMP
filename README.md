@@ -25,7 +25,7 @@ dependencies {
 <b>Done!</b>
 
 ## How to use
-1) Create a new StompClient and set a callback 
+#### 1. Create a new StompClient and set a callback. 
 ```Java
 stompClient = new StompClient();
 stompClient.setStompCallback(new StompCallback() {
@@ -36,13 +36,13 @@ stompClient.setStompCallback(new StompCallback() {
             }
         });
 ```
-2) Connect to your server websocket endpoint. After you connect you can subscribe to server topics!
+#### 2. Connect to your server websocket endpoint. After you connect you can subscribe to server topics!
 ```Java
 String serverEndpoint = "ws://10.0.2.2:8080/your_server_endpoint";
 stompClient.connect(serverEndpoint);
 stompClient.subscribe("/topic/exampleTopic");
 ```
-3) If you want to send a message you can do it in this way.
+#### 3. If you want to send a message you can do it in this way.
 ```Java
 String message = "hello world!";
 stompClient.send("/app/example", message);
