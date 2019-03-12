@@ -39,13 +39,15 @@ stompClient.setStompCallback(new StompCallback() {
 #### 2. Connect to your server websocket endpoint. After you connect you can subscribe to server topics!
 ```Java
 String serverEndpoint = "ws://10.0.2.2:8080/your_server_endpoint";
+String topic = "/app/example";
 stompClient.connect(serverEndpoint);
-stompClient.subscribe("/topic/exampleTopic");
+stompClient.subscribe(topic);
 ```
 #### 3. If you want to send a message you can do it in this way.
 ```Java
+String topic = "/app/example";
 String message = "hello world!";
-stompClient.send("/app/example", message);
+stompClient.send(topic, message);
 ```
 If you need more examples you can check the [sample application.](https://github.com/DadeKuma/DroidSTOMP/blob/master/app/src/main/java/com/github/dadekuma/droidstomp/MainActivity.java)
 
