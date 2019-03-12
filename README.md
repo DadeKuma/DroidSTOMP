@@ -1,5 +1,6 @@
 # DroidSTOMP
 [![](https://jitpack.io/v/DadeKuma/DroidSTOMP.svg)](https://jitpack.io/#DadeKuma/DroidSTOMP)
+[![Build Status](https://travis-ci.com/DadeKuma/DroidSTOMP.svg?branch=master)](https://travis-ci.com/DadeKuma/DroidSTOMP)
 
 An Android library that implements the messaging protocol [STOMP](https://stomp.github.io/) that can be used over websockets.
 
