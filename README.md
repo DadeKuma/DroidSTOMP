@@ -25,7 +25,11 @@ dependencies {
 <b>Done!</b>
 
 ## How to use
-#### 1. Create a new StompClient and set a callback. 
+#### 1. Add internet permission to your Android Manifest.
+```
+<uses-permission android:name="android.permission.INTERNET"/>
+```
+#### 2. Create a new StompClient and set a callback. 
 ```Java
 stompClient = new StompClient();
 stompClient.setStompCallback(new StompCallback() {
@@ -36,20 +40,26 @@ stompClient.setStompCallback(new StompCallback() {
             }
         });
 ```
-#### 2. Connect to your server websocket endpoint. After you connect you can subscribe to server topics!
+#### 3. Connect to your server websocket endpoint. After you connect you can subscribe to server topics!
 ```Java
 String serverEndpoint = "ws://10.0.2.2:8080/your_server_endpoint";
 String topic = "/app/example";
 stompClient.connect(serverEndpoint);
 stompClient.subscribe(topic);
 ```
-#### 3. If you want to send a message you can do it in this way.
+#### 4. If you want to send a message you can do it in this way.
 ```Java
 String topic = "/app/example";
 String message = "hello world!";
 stompClient.send(topic, message);
 ```
 If you need more examples you can check the [sample application.](https://github.com/DadeKuma/DroidSTOMP/blob/master/app/src/main/java/com/github/dadekuma/droidstomp/MainActivity.java)
+
+### IMPORTANT NOTE:
+
+Since Android 9.0 (API level 28) cleartext support is disabled by default. So your app will not send cleartext http requests, if you don't enable it. 
+
+If you don't know how to solve this problem I suggest to look at [this](https://stackoverflow.com/a/50834600/8128154) post on StackOverflow.
 
 
 ### Backend
