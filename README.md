@@ -1,4 +1,6 @@
 # DroidSTOMP
+[![](https://jitpack.io/v/DadeKuma/DroidSTOMP.svg)](https://jitpack.io/#DadeKuma/DroidSTOMP)
+
 An Android library that implements the messaging protocol [STOMP](https://stomp.github.io/) that can be used over websockets.
 
 <b>Here's a short demo of the library used to build a simple chat!</b>
