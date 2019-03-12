@@ -20,7 +20,7 @@ repositories {
 }
 dependencies {
     ...
-    implementation 'com.github.DadeKuma:DroidSTOMP:0.4.0'
+    implementation 'com.github.DadeKuma:DroidSTOMP:0.4.1'
 }
 ```
 <b>Done!</b>
